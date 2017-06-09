@@ -1,0 +1,98 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?>
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="januridp.com">
+  <title>PT. MPP International Developments Indonesia &middot; Independent Project and Development Managers.</title>
+  <link rel="shortcut icon" href="<?=base_url();?>assets/img/favicon.png">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="<?=base_url();?>assets/css/materialize.min.css">
+  <link type="text/css" rel="stylesheet" href="<?=base_url();?>assets/css/style.min.css">
+  <link type="text/css" rel="stylesheet" href="<?=base_url();?>assets/css/prism.css">
+  <link type="text/css" rel="stylesheet" href="<?=base_url();?>assets/css/perfect-scrollbar.css">
+  <style>
+  html,
+body {
+height: 100%;
+width: 20%;
+}
+html {
+display: table;
+margin: auto;
+}
+body {
+display: table-cell;
+vertical-align: middle;
+}
+  </style>
+  </head>
+
+  <body class="red">
+    <!-- Start Page Loading -->
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+    <!-- End Page Loading -->
+
+
+
+    <div id="login-page" class="row">
+      <div class="col s12 z-depth-4 card-panel">
+        <?php $error="";echo $error;?>
+          <?php echo validation_errors(); ?>
+          <?php echo form_open('Auth/login'); ?>
+          <div class="row">
+            <div class="input-field col s12 center">
+              <img src="<?=base_url();?>assets/img/logo.png" alt="" class="responsive-img valign profile-image-login">
+              <p class="center login-form-text">Please identify yourself</p>
+            </div>
+          </div>
+          <div class="row margin">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">person_outline</i>
+              <input id="username" type="text" name="username" required autofocus>
+              <label for="username">Username</label>
+            </div>
+          </div>
+          <div class="row margin">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">lock_outline</i>
+              <input id="password" type="password" name="password" required>
+              <label for="password">Password</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <button class="btn waves-effect waves-light col s12" type="submit" name="action">Login</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6 m6 l6">
+              <p class="margin medium-small"><a href="register">Register Now!</a></p>
+            </div>
+            <div class="input-field col s6 m6 l6">
+                <p class="margin right-align medium-small"><a href="forgot/password">Forgot password</a></p>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+<script src="<?=base_url();?>assets/js/jquery-1.11.2.min.js"></script>
+<script src="<?=base_url();?>assets/js/materialize.min.js"></script>
+<script src="<?=base_url();?>assets/js/prism.js"></script>
+<script src="<?=base_url();?>assets/js/perfect-scrollbar.min.js"></script>
+<script src="<?=base_url();?>assets/js/plugins.min.js"></script>
+</body>
+</html>
